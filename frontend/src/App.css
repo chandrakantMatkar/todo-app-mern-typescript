@@ -1,0 +1,261 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  .logout-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.todo-manage-container {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 4fr; */
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+
+  display: grid;
+  grid-template-areas:
+    "sidebar content empty";
+  grid-template-columns: 50px 4fr;
+  /* Sidebar 200px wide, content area takes remaining space */
+  /* height: 300px; */
+  grid-gap: 30px;
+  font-size: medium;
+  font-weight: 500;
+  color: white;
+  border: none;
+  width: 450px;
+}
+
+.status-div {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+}
+
+.info-div {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: start;
+}
+
+.todo-manage-container input {
+  height: 40px;
+}
+
+button {
+  height: 40px;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 700;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  background-color: burlywood;
+}
+
+.update-button {
+  background-color: rgba(15, 100, 164, 255);
+}
+
+.delete-button {
+  background-color: rgba(217, 61, 62, 255);
+}
+
+.text-inputs {
+  padding: 5px 5px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen';
+  font-size: 15px;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar {
+  border: white;
+  border-radius: 2px;
+  position: sticky;
+}
+
+.login-inputs {
+  width: 300px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  height: 25px;
+}
+
+.todo-item-small {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 500px;
+  min-width: 500px;
+  position: relative;
+  margin: 15px;
+
+  input {
+    margin: 0 10px;
+
+  }
+
+  button {
+    margin: 0 10px;
+    float: right;
+    position: absolute;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: rgba(15, 100, 164, 255);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin: 5px;
+  text-align: start;
+}
+
+p {
+  font-size: 14px;
+  color: black;
+  margin: 5px;
+  text-align: start;
+}
+
+.activeClass {
+  background-color: green;
+  color: white;
+}
+
+.inactiveClass {
+  background-color: black;
+  color: white;
+}
+
+.login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+  /* max-width: 300px; */
+  margin: 0 auto;
+  margin-top: 50px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: small;
+}
+
+.signup-fields-container {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 300px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    height: 25px;
+    border-color: #bdc6d8;
+  }
+  button{
+    background-color: green !important;
+  }
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
